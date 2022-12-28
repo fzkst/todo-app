@@ -1,0 +1,19 @@
+function App() {
+  const [feladat, setFeladat] = useState("");
+  const [feladatok, setFeladatok] = useState([]);
+  
+  const feladatHozzaadasa = () => {    
+    const ujFeladatok = [];
+    feladatok.forEach(feladat => ujFeladatok.push(feladat));
+    ujFeladatok.push(feladat);
+    setFeladatok(ujFeladatok);
+  }
+
+  const feladatLista = [];
+  feladatok.forEach(feladat => {
+    feladatLista.push(
+      <div>
+        <li>{feladat}</li>
+      </div>
+    )
+  })
